@@ -25,9 +25,22 @@
 */
 :root {
   --color-primary: var(--violet-700);
-  --color-primary-hover: var(--violet-100);
+  --font-sans: "MonaSans", sans-serif;
+  --color-primary-hover: var(--violet-800);
   --color-primary-soft: var(--violet-100);
   --color-focus: var(--violet-650);
-  --font-sans: "Inter", system-ui, sans-serif;
+
+  --color-text: #0d021f;
+  --color-bg: #f9f5fe;
+
+  /* taille radius */
   --radius: 4px;
+}
+
+@font-face {
+  font-family: "MonaSans";
+  src: url("/assets/fonts/MonaSans.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
