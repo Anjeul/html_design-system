@@ -9,3 +9,7 @@
    - a : couleur, etat :hover
    - :focus-visible : contour visible pour la navigation clavier
    ========================================================================== */
+
+body {
+  /* background: var(--color-primary); */
+}
