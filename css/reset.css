@@ -73,7 +73,7 @@ table {
 }
 
 /* Accessibilite : on respecte le reglage systeme "reduire les animations". */
-@media (prefers-reduced-motion: reduce) {
+/* @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
@@ -82,4 +82,4 @@ table {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
+} */

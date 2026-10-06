@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guide de style - TechCorp RH</title>
+    <meta name="Style guide" content="Guide pour le style" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#1d4ed8" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/app.js" defer></script>
+    <style>
+      main {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+      }
+      .pastille {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+      h2 {
+        background: #e5eff9;
+        padding: 1rem;
+        border-radius: 16px;
+        color: #0068d0;
+        border: 1px #0068d0 dashed;
+      }
+
+      section {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        gap: 2rem;
+        padding: 2rem;
+        margin: 1rem;
+        background: white;
+        border-radius: 24px;
+        align-items: center;
+        transition: transform 1s ease;
+      }
+      section:hover {
+        cursor: pointer;
+        transform: translateY(-10px);
+      }
+      .wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 28px;
+        justify-content: center;
+        align-items: center;
+      }
+      .barre {
+        height: 56px;
+        background: black;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Design system TechCorp RH</h1>
+
+      <!-- <h2>Sous-titre de la page</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste assumenda
+        modi architecto minus consequatur pariatur?
+      </p>
+      <a href="#">www.mon-super-lien.com</a>
+
+      <div class="card">
+        <div class="card__header">
+          <h2>Demande de congé</h2>
+          <span class="badge badge--approved">Approuvée</span>
+        </div>
+
+        <p>Votre demande a été acceptée.</p>
+
+        <div class="alert">Ceci est une alerte.</div>
+
+        <div class="card__footer">
+          <button class="btn btn--primary">Valider</button>
+          <button class="btn btn--secondary">Annuler</button>
+          <button class="btn btn--danger">Supprimer</button>
+          <button class="btn btn--ghost">Retour</button>
+        </div>
+      </div>
+
+      <div class="alert alert-info">
+        <div>
+          <strong class="alert__title">Information</strong>
+          <p>Votre demande est en cours de traitement.</p>
+        </div>
+      </div>
+
+      <div class="alert alert-succes">
+        <div>
+          <strong class="alert__title">Succès</strong>
+          <p>Votre demande a été acceptée.</p>
+        </div>
+      </div>
+
+      <div class="alert alert-warning">
+        <div>
+          <strong class="alert__title">Attention</strong>
+          <p>Il manque des informations.</p>
+        </div>
+      </div>
+
+      <div class="alert alert-error">
+        <div>
+          <strong class="alert__title">Erreur</strong>
+          <p>Impossible d'enregistrer votre demande.</p>
+        </div>
+      </div> -->
+
+      <!-- CA COMMENCE ICI -->
+
+      <section aria-labelledby="couleurs">
+        <h2 id="couleurs">Couleurs</h2>
+        <div class="wrapper">
+          <figure>
+            <div
+              class="pastille"
+              style="background-color: var(--violet-700)"
+            ></div>
+            <figcaption>--color-primary</figcaption>
+          </figure>
+          <figure>
+            <div
+              class="pastille"
+              style="background-color: var(--color-text)"
+            ></div>
+            <figcaption>--color-text</figcaption>
+          </figure>
+          <figure>
+            <div
+              class="pastille"
+              style="background-color: var(--color-bg); border: 2px solid black"
+            ></div>
+            <figcaption>--color-bg</figcaption>
+          </figure>
+          <figure>
+            <div
+              class="pastille"
+              style="background-color: var(--color-success)"
+            ></div>
+            <figcaption>--color-success</figcaption>
+          </figure>
+          <figure>
+            <div
+              class="pastille"
+              style="background-color: var(--color-danger)"
+            ></div>
+            <figcaption>--color-warning</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section aria-labelledby="typographie">
+        <h2 id="typographie">Typographie</h2>
+        <div class="wrapper">
+          <p style="font-size: var(--text-sm)">--text-sm</p>
+          <p style="font-size: var(--text-base)">--text-base</p>
+          <p style="font-size: var(--text-2xl)">--text-2xl</p>
+          <p style="font-size: var(--text-3xl)">--text-3xl</p>
+        </div>
+      </section>
+      <section aria-labelledby="espacements">
+        <h2 id="espacements">Espacements</h2>
+        <div class="wrapper">
+          <div class="barre" style="width: var(--space-1)"></div>
+          <div class="barre" style="width: var(--space-3)"></div>
+          <div class="barre" style="width: var(--space-4)"></div>
+          <div class="barre" style="width: var(--space-6)"></div>
+          <div class="barre" style="width: var(--space-8)"></div>
+        </div>
+      </section>
+      <section aria-labelledby="boutons">
+        <h2 id="boutons">Boutons</h2>
+      </section>
+      <section aria-labelledby="badges">
+        <h2 id="badges">Badges</h2>
+      </section>
+      <section aria-labelledby="alertes">
+        <h2 id="alertes">Alertes</h2>
+      </section>
+      <section aria-labelledby="cartes">
+        <h2 id="cartes">Cartes et indicateur</h2>
+      </section>
+    </main>
+  </body>
+</html>
