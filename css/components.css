@@ -170,3 +170,48 @@
 .alert__title {
   font-weight: 600;
 }
+
+/* logo */
+.logo {
+  width: 3rem;
+}
+.logo--auth {
+  width: 8rem;
+}
+
+/* Inputs & label */
+.input {
+  border-radius: var(--radius-lg);
+  border: none;
+  padding: var(--space-2);
+}
+.input:focus:not(:focus-visible) {
+  border: 1px solid var(--color-primary);
+}
+.input::placeholder {
+  font-size: var(--text-sm);
+}
+.label-checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+  accent-color: var(--color-on-primary);
+}
+/* Formulaires */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}

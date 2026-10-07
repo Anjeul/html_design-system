@@ -8,3 +8,94 @@
    - .grid-auto : grille de cartes responsive sans media query
    Rappel : mobile-first, breakpoints 40em et 64em.
    ========================================================================== */
+
+/* mise en page de connexion */
+.auth {
+  display: grid;
+  min-height: 100vh;
+}
+.auth__aside {
+  display: none;
+}
+
+.auth__main {
+  display: grid;
+  place-items: center;
+  padding: var(--space-6) var(--space-4);
+}
+.auth__panel {
+  width: 100%;
+  max-width: 28rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+.footer {
+  min-height: 10vh;
+  background: var(--color-text);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.footer a {
+  color: var(--color-link-on-dark);
+}
+
+/* ordinateur */
+@media (min-width: 64em) {
+  .auth {
+    grid-template-columns: 1fr 1fr;
+  }
+  .auth__aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-6);
+    align-items: center;
+    padding: var(--space-7);
+    color: var(--color-on-primary);
+    background-color: var(--color-primary);
+  }
+}
+
+/* petit ordinateur */
+@media (min-width: 40em) {
+}
+
+/* .page {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 64px 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+}
+
+.page__header  { grid-area: header; }
+.page__sidebar { grid-area: sidebar; }
+.page__main    { grid-area: main; } */
+
+/* mobile
+.app {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main";
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: var(--header-height) 1fr;
+  min-height: 100vh;
+}
+
+.app__header {
+  grid-area: header;
+  position: sticky; 
+  top: 0;
+  z-index: 20;
+}
+
+.app__main {
+  grid-area: main;
+  padding: var(--space-5) var(--space-4);
+  min-width: 0;
+} */

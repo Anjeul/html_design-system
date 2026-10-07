@@ -32,3 +32,12 @@ document.querySelectorAll("[data-dialog-open]").forEach((button) => {
   const dialog = document.getElementById(button.dataset.dialogOpen);
   button.addEventListener("click", () => dialog.showModal());
 });
+
+// etat disabled du btn dans le login form
+
+const form = document.querySelector("#login-form");
+const button = form.querySelector("button[type='submit']");
+
+form.addEventListener("input", () => {
+  button.disabled = !form.checkValidity();
+});
