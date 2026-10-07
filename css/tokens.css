@@ -137,7 +137,7 @@
   --transition: 150ms ease;
 
   /* ---------- Dimensions de l'application ---------- */
-  --header-height: 4rem;
+  --header-height: 6rem;
   --sidebar-width: 16rem;
   --content-max: 72rem;
 

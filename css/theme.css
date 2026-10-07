@@ -29,6 +29,8 @@
   --color-primary-hover: var(--violet-800);
   --color-primary-soft: var(--violet-100);
   --color-focus: var(--violet-650);
+  --color-secondary: #f77496;
+  --color-accent: #f57355;
 
   --color-link-on-dark: #f9f5fe;
   --color-text: #0d021f;
