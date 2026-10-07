@@ -41,7 +41,7 @@
 .btn--secondary {
   color: var(--color-text);
   background-color: var(--color-surface);
-  border-color: var(--color-border-input);
+  border-color: var(--color-border);
 }
 
 .btn--secondary:hover {
@@ -214,7 +214,7 @@ input[type="checkbox"] {
   background: linear-gradient(
     to right,
     var(--color-primary) 80%,
-    var(--color-secondary)
+    var(--color-secondary) 100%
   );
   border-bottom: var(--color-border) 6px solid;
   display: flex;
@@ -338,7 +338,7 @@ input[type="checkbox"] {
 }
 .nav__link[aria-current="page"] {
   font-weight: 1000;
-  color: var(--color-accent);
+  color: var(--color-secondary);
 }
 .nav__link[aria-current="page"]::before {
   content: "* ";
@@ -352,4 +352,93 @@ input[type="checkbox"] {
 
 .skip-link:focus {
   transform: translateY(0);
+}
+
+/* CARD */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card--recap {
+  align-items: start;
+  gap: var(--space-2);
+}
+.stat--bold {
+  font-weight: 800;
+  font-size: var(--text-2xl);
+  color: var(--color-accent);
+}
+
+/* LISTE */
+.list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.card--list {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-direction: row;
+  border: var(--color-primary-soft) 1px solid;
+  width: 100%;
+}
+.list__value {
+  background: var(--color-primary-soft);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-3);
+  border-radius: var(--radius-lg);
+  justify-content: center;
+  min-width: 20%;
+  color: var(--color-primary);
+}
+.list--bold {
+  font-weight: 800;
+  font-size: var(--text-xl);
+}
+.list__sub-text {
+  color: var(--color-text-muted);
+}
+.list__title {
+  font-size: var(--text-lg);
+  font-weight: 500;
+}
+.list__statut {
+  font-size: var(--text-sm);
+  background: var(--color-info-soft);
+  color: var(--color-info-text);
+  padding: var(--space-2);
+  border-radius: var(--radius-lg);
+  border: var(--color-info-text) 1px solid;
+}
+
+/* table */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border: 2px solid var(--color-primary-soft);
+  background: white;
+  border-radius: var(--radius-lg);
+
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+}
+caption {
+  margin-bottom: var(--space-3);
+  text-align: start;
+  padding-left: 1em;
+}
+th,
+td {
+  border: 1px solid var(--color-primary-soft);
+  padding: var(--space-4);
 }

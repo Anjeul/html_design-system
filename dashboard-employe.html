@@ -82,8 +82,7 @@
               class="nav__link"
               href="dashboard-employe.html"
               aria-current="page"
-              ><?xml version="1.0" encoding="utf-8"?>
-              <!-- License: PD. Made by Khushmeen Sidhu: https://khushmeen.com/icons.html -->
+            >
               <svg
                 width="24px"
                 height="24px"
@@ -117,8 +116,6 @@
           </li>
           <li>
             <a class="nav__link" href="conges-demande.html">
-              <?xml version="1.0" encoding="utf-8"?>
-              <!-- License: PD. Made by Giovanna Tonello: https://www.figma.com/@gi -->
               <svg
                 width="28px"
                 height="36px"
@@ -142,9 +139,7 @@
             </a>
           </li>
           <li>
-            <a class="nav__link" href="note-frais-nouvelle.html"
-              ><?xml version="1.0" encoding="utf-8"?>
-              <!-- License: PD. Made by theforgesmith: https://icons.theforgesmith.com -->
+            <a class="nav__link" href="note-frais-nouvelle.html">
               <svg
                 width="32px"
                 height="100%"
@@ -176,8 +171,9 @@
                   d="M40.21,34.51a9,9,0,1,1-5.48-16.15,8.86,8.86,0,0,1,3.78.83"
                 />
                 <line x1="21.22" y1="25.18" x2="36.21" y2="25.18" />
-                <line x1="21.22" y1="29.76" x2="34.4" y2="29.76" /></svg
-              >Notes de frais</a
+                <line x1="21.22" y1="29.76" x2="34.4" y2="29.76" />
+              </svg>
+              Notes de frais</a
             >
           </li>
           <li>
@@ -212,14 +208,13 @@
                 <path
                   d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM6 8a6 6 0 1 1 12 0A6 6 0 0 1 6 8zm2 10a3 3 0 0 0-3 3 1 1 0 1 1-2 0 5 5 0 0 1 5-5h8a5 5 0 0 1 5 5 1 1 0 1 1-2 0 3 3 0 0 0-3-3H8z"
                   fill="currentColor"
-                /></svg
-              >Mon profil</a
-            >
+                />
+              </svg>
+              Mon profil
+            </a>
           </li>
           <li>
             <a class="nav__link" href="./login.html">
-              <?xml version="1.0" encoding="utf-8"?>
-              <!-- License: PD. Made by Arthur Kazais: https://www.figma.com/@thearthurk -->
               <svg
                 width="28px"
                 height="100%"
@@ -232,19 +227,129 @@
                   clip-rule="evenodd"
                   d="M2 6.5C2 4.01472 4.01472 2 6.5 2H12C14.2091 2 16 3.79086 16 6V7C16 7.55228 15.5523 8 15 8C14.4477 8 14 7.55228 14 7V6C14 4.89543 13.1046 4 12 4H6.5C5.11929 4 4 5.11929 4 6.5V17.5C4 18.8807 5.11929 20 6.5 20H12C13.1046 20 14 19.1046 14 18V17C14 16.4477 14.4477 16 15 16C15.5523 16 16 16.4477 16 17V18C16 20.2091 14.2091 22 12 22H6.5C4.01472 22 2 19.9853 2 17.5V6.5ZM18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289L22.7071 11.2929C23.0976 11.6834 23.0976 12.3166 22.7071 12.7071L19.7071 15.7071C19.3166 16.0976 18.6834 16.0976 18.2929 15.7071C17.9024 15.3166 17.9024 14.6834 18.2929 14.2929L19.5858 13L11 13C10.4477 13 10 12.5523 10 12C10 11.4477 10.4477 11 11 11L19.5858 11L18.2929 9.70711C17.9024 9.31658 17.9024 8.68342 18.2929 8.29289Z"
                   fill="currentColor"
-                /></svg
-              >Deconnexion</a
-            >
+                />
+              </svg>
+              Deconnexion
+            </a>
           </li>
         </ul>
       </nav>
 
       <main class="app__main" id="contenu" tabindex="-1">
-        <div class="container">
-          <h2>Bonjour Claire 👋</h2>
-          <p></p>
-        </div>
+        <section class="container">
+          <header class="page-header">
+            <div class="page-header__hello">
+              <h2>Bonjour Claire 👋</h2>
+              <h3 class="page-header__subtitle">
+                Que souhaitez-vous faire aujourd’hui ?
+              </h3>
+            </div>
+            <div class="page-header__actions">
+              <a href="#" class="btn btn--secondary">Nouvelle note de frais</a>
+              <a href="#" class="btn btn--primary">Demander un congé</a>
+            </div>
+          </header>
+
+          <section>
+            <h2 class="sr-only">Mes soldes</h2>
+            <ul class="grid-auto">
+              <li class="card stat">
+                <span class="stat--bold">14</span>
+                <span>CP restants</span>
+              </li>
+              <li class="card stat">
+                <span class="stat--bold">6</span>
+                <span>RTT restants</span>
+              </li>
+              <li class="card stat">
+                <span class="stat--bold">1</span>
+                <span>notes de frais en attente</span>
+              </li>
+              <li class="card stat">
+                <span class="stat--bold">3</span>
+                <span>matériel attribué</span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="grid-split">
+            <div class="card card--recap">
+              <h2>Mes prochaines absences</h2>
+              <ul class="list">
+                <li class="card card--list">
+                  <div>
+                    <p class="list__title">Congés payés</p>
+                    <p class="list__sub-text">Du 26/10 au 30/10/2026</p>
+                  </div>
+                  <div class="list__value">
+                    <span class="list--bold">5</span>
+                    <span>jours</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="card card--recap">
+              <h2>Mon matériel</h2>
+              <ul class="list">
+                <li class="card card--list">
+                  <div>
+                    <p class="list__title">Ordinateur portable</p>
+                    <p class="list__sub-text">Depuis le 26/10/2026</p>
+                  </div>
+                  <p class="list__statut">Bon état</p>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="table-wrapper">
+            <table>
+              <caption>
+                <h2>Mes dernières notes de frais</h2>
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Montant</th>
+                  <th scope="col">Statut</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>12/09/2026</td>
+                  <td>Train Lyon - Paris, salon Devoxx</td>
+                  <td>Transport</td>
+                  <td>89,50 €</td>
+                  <td class="badge--pending">En attente manager</td>
+                </tr>
+                <tr>
+                  <td>15/09/2026</td>
+                  <td>Déjeuner client Axelis</td>
+                  <td>Restauration</td>
+                  <td>42,00 €</td>
+                  <td class="badge--approved">Validée</td>
+                </tr>
+                <tr>
+                  <td>02/09/2026</td>
+                  <td>Hôtel, formation Kubernetes</td>
+                  <td>Hébergement</td>
+                  <td>128,00 €</td>
+                  <td class="badge--refunded">Remboursée</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
       </main>
     </div>
   </body>
 </html>
+
+<!-- | Date | Description | Type | Montant | Statut |
+|---|---|---|---|---|
+| 12/09/2026 | Train Lyon - Paris, salon Devoxx | Transport | 89,50 € | En attente manager |
+| 15/09/2026 | Déjeuner client Axelis | Restauration | 42,00 € | Validée |
+| 02/09/2026 | Hôtel, formation Kubernetes | Hébergement | 128,00 € | Remboursée |
+ -->
