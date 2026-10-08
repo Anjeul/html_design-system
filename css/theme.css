@@ -24,17 +24,45 @@
 }
 */
 :root {
-  --color-primary: var(--violet-700);
   --font-sans: "MonaSans", sans-serif;
-  --color-primary-hover: var(--violet-800);
-  --color-primary-soft: var(--violet-100);
-  --color-focus: var(--violet-650);
-  --color-secondary: #f77496;
-  --color-accent: #f57355;
-
   --color-link-on-dark: #f9f5fe;
   --color-text: #0d021f;
   --color-bg: #f9f5fe;
+  --color-focus: var(--violet-650);
+
+  /* EMPLOYÉ — Violet */
+  --color-primary: #6b21f2;
+  --color-primary-hover: #48189e;
+  --color-primary-soft: #f1ebfc;
+
+  /* RH — Rose */
+  --color-secondary: #f77496;
+  --color-secondary-hover: #b83d60;
+  --color-secondary-soft: #fff0f4;
+
+  /* MANAGER — Orange corail */
+  --color-accent: #f57355;
+  --color-accent-hover: #b8452b;
+  --color-accent-soft: #fff0e9;
+
+  /* Thème par défaut : Employé */
+  --theme-color: var(--color-primary);
+  --theme-color-hover: var(--color-primary-hover);
+  --theme-color-soft: var(--color-primary-soft);
+
+  /* Manager */
+  [data-role="manager"] {
+    --theme-color: var(--color-accent);
+    --theme-color-hover: var(--color-accent-hover);
+    --theme-color-soft: var(--color-accent-soft);
+  }
+
+  /* RH */
+  [data-role="rh"] {
+    --theme-color: var(--color-secondary);
+    --theme-color-hover: var(--color-secondary-hover);
+    --theme-color-soft: var(--color-secondary-soft);
+  }
 
   /* taille radius */
   --radius: 4px;

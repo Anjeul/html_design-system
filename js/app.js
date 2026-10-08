@@ -4,6 +4,8 @@
    ========================================================================== */
 
 // Ouverture / fermeture de la navigation sur mobile.
+lucide.createIcons();
+
 const app = document.querySelector(".app");
 const navToggle = document.querySelector("[data-nav-toggle]");
 

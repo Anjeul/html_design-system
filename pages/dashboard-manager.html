@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Dashboard - TechCorp RH</title>
+    <meta name="Dashboard employe" />
+
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#1d4ed8" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <script src="../js/lucide.min.js" defer></script>
+    <script src="../js/app.js" defer></script>
+  </head>
+  <body data-role="manager">
+    <a href="#contenu" class="skip-link">Aller au contenu principal</a>
+    <div class="app">
+      <header class="app__header topbar topbar--manager">
+        <button
+          class="topbar__menu"
+          type="button"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          <svg
+            class="burger-icon"
+            xmlns="http://w3.org"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <span class="sr-only">Ouvrir le menu</span>
+        </button>
+
+        <a class="brand brand--mobile" href="dashboard-employe.html">
+          <img
+            class="brand__logo"
+            src="../assets/logo.svg"
+            alt=""
+            width="32"
+            height="32"
+          />
+          TC
+        </a>
+        <a class="brand brand--desktop" href="dashboard-employe.html">
+          <img
+            class="brand__logo"
+            src="../assets/logo.svg"
+            alt=""
+            width="32"
+            height="32"
+          />
+          TechCorp RH
+        </a>
+        <div class="topbar__actions">
+          <div class="user">
+            <span class="avatar" aria-hidden="true">KB</span>
+            <div class="user__info">
+              <p class="user__name">Karim B.</p>
+              <p class="user__role">Manager · Pôle Web</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <aside class="app__sidebar sidebar" id="navigation" hidden>
+        <nav aria-label="Navigation principale">
+          <h2 class="nav__heading" id="nav-perso">Mon espace</h2>
+          <ul class="nav" role="list" aria-labelledby="nav-perso">
+            <li>
+              <a class="nav__link" href="dashboard-employe.html"
+                ><i data-lucide="layout-dashboard" aria-hidden="true"></i>
+                Tableau de bord
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="conges-demande.html">
+                <i data-lucide="calendar-days" aria-hidden="true"></i>Mes congés
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="note-frais-nouvelle.html"
+                ><i data-lucide="receipt" aria-hidden="true"></i> Notes de
+                frais</a
+              >
+            </li>
+            <li>
+              <a class="nav__link" href="materiel.html">
+                <i data-lucide="laptop" aria-hidden="true"></i>Matériel</a
+              >
+            </li>
+            <li>
+              <a class="nav__link" href="profil.html"
+                ><i data-lucide="user-round" aria-hidden="true"></i> Mon profil
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="nav--secondary" aria-label="Navigation manager">
+          <h2 class="nav__heading">Mon équipe</h2>
+          <ul class="nav">
+            <li>
+              <a class="nav__link" href="vue-equipe.html" aria-current="page">
+                <i data-lucide="users-round"></i>Vue d'équipe
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="demandes-conges.html"
+                ><i data-lucide="clipboard-check"></i>
+                <span>Demandes à traiter</span>
+                <span
+                  class="nav__count"
+                  aria-label="nombre de demandes à traiter"
+                  >5
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="planning-equipe.html"
+                ><i data-lucide="calendar-range"></i>
+                Planning d'équipe
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="sidebar__footer">
+          <button
+            type="button"
+            class="sidebar__logout nav__link"
+            onclick="window.location.href = './login.html'"
+          >
+            <i data-lucide="log-out"></i>Déconnexion
+          </button>
+        </div>
+      </aside>
+
+      <main class="app__main" id="contenu" tabindex="-1">
+        <section class="container">
+          <header class="page-header">
+            <div class="page-header__hello">
+              <h2>👥 Vue d'équipe</h2>
+              <h3 class="page-header__subtitle">Pôle Web, 8 collaborateurs</h3>
+            </div>
+            <div class="page-header__actions">
+              <a href="#" class="btn btn--secondary">Voir le planning</a>
+              <a href="#" class="btn btn--primary">Traiter les demandes</a>
+            </div>
+          </header>
+
+          <div class="alert alert-warning">
+            <div class="alert__content">
+              <div class="alert__header">
+                <span class="alert__title">Attention</span>
+                <span class="alert__meta">26 — 30 OCT</span>
+              </div>
+
+              <p class="alert__message">
+                Risque de sous-effectif dans votre équipe.
+              </p>
+            </div>
+
+            <div class="alert__icon" aria-hidden="true">
+              <i data-lucide="users-round"></i>
+            </div>
+          </div>
+          <section>
+            <h2 class="sr-only">Mes soldes</h2>
+            <ul class="grid-auto">
+              <li class="card stat">
+                <span class="stat--bold">5</span>
+                <span>Congés à valider</span>
+              </li>
+              <li class="card stat">
+                <span class="stat--bold">3</span>
+                <span>notes de frais à valider</span>
+                <span>412.30€</span>
+              </li>
+              <li class="card stat">
+                <span class="stat--bold">2 sur 8</span>
+                <span>absent aujourd'hui</span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="grid-split">
+            <div class="card card--recap">
+              <h2>Dernières demandes en attente</h2>
+              <table class="table--modern">
+                <thead>
+                  <tr>
+                    <th scope="col">Collaborateur</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Période</th>
+                    <th scope="col">Jours</th>
+                    <th scope="col">Statut</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>Claire Martin</td>
+                    <td>Congés payés</td>
+                    <td>26/10 au 30/10/2026</td>
+                    <td>5</td>
+                    <td>
+                      <span class="badge badge--pending">
+                        En attente manager
+                      </span>
+                    </td>
+                    <td>
+                      <a
+                        class="btn btn--ghost btn--sm"
+                        href="demande-detail.html"
+                      >
+                        Examiner<span class="sr-only">
+                          la demande de Claire Martin</span
+                        >
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Thomas Roux</td>
+                    <td>RTT</td>
+                    <td>30/10/2026</td>
+                    <td>1</td>
+                    <td>
+                      <span class="badge badge--approved"> Validée </span>
+                    </td>
+                    <td>
+                      <a
+                        class="btn btn--ghost btn--sm"
+                        href="demande-detail.html"
+                      >
+                        Examiner<span class="sr-only">
+                          la demande de Thomas Roux</span
+                        >
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Mehdi Fontaine</td>
+                    <td>Sans solde</td>
+                    <td>16/11 au 20/11/2026</td>
+                    <td>5</td>
+                    <td>
+                      <span class="badge badge--rejected"> Refusée</span>
+                    </td>
+                    <td>
+                      <a
+                        class="btn btn--ghost btn--sm"
+                        href="demande-detail.html"
+                      >
+                        Examiner<span class="sr-only">
+                          la demande de Mehdi Fontaine</span
+                        >
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="card card--recap">
+              <h2>Présence aujourd'hui</h2>
+              <span>6 collaborateurs</span>
+
+              <ul class="list presence-list">
+                <li class="presence-list__item">
+                  <div class="user">
+                    <span class="avatar">CM</span>
+                    <span>Claire Martin</span>
+                  </div>
+                  <span class="badge badge--approved">Présent</span>
+                </li>
+
+                <li class="presence-list__item">
+                  <div class="user">
+                    <span class="avatar">LD</span>
+                    <span>Lucas Dubois</span>
+                  </div>
+                  <span class="badge badge--pending">Absent</span>
+                </li>
+
+                <li class="presence-list__item">
+                  <div class="user">
+                    <span class="avatar">AN</span>
+                    <span>Amina Nasri</span>
+                  </div>
+                  <span class="badge badge--approved">Présent</span>
+                </li>
+
+                <li class="presence-list__item">
+                  <div class="user">
+                    <span class="avatar">TR</span>
+                    <span>Thomas Roux</span>
+                  </div>
+                  <span class="badge badge--in-progress"> Télétravail </span>
+                </li>
+
+                <li class="presence-list__item">
+                  <div class="user">
+                    <span class="avatar">JP</span>
+                    <span>Julie Petit</span>
+                  </div>
+                  <span class="badge badge--approved">Présent</span>
+                </li>
+
+                <li class="presence-list__item">
+                  <div class="user">
+                    <span class="avatar">MF</span>
+                    <span>Mehdi Fontaine</span>
+                  </div>
+                  <span class="badge badge--approved">Présent</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
+
+<!-- | Date | Description | Type | Montant | Statut |
+|---|---|---|---|---|
+| 12/09/2026 | Train Lyon - Paris, salon Devoxx | Transport | 89,50 € | En attente manager |
+| 15/09/2026 | Déjeuner client Axelis | Restauration | 42,00 € | Validée |
+| 02/09/2026 | Hôtel, formation Kubernetes | Hébergement | 128,00 € | Remboursée |
+ -->

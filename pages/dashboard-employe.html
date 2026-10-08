@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Dashboard - TechCorp RH</title>
+    <meta name="Dashboard employe" />
+
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#1d4ed8" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <script src="../js/lucide.min.js" defer></script>
+    <script src="../js/app.js" defer></script>
+  </head>
+  <body>
+    <a href="#contenu" class="skip-link">Aller au contenu principal</a>
+    <div class="app">
+      <header class="app__header topbar topbar--employe">
+        <button
+          class="topbar__menu"
+          type="button"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          <svg
+            class="burger-icon"
+            xmlns="http://w3.org"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <span class="sr-only">Ouvrir le menu</span>
+        </button>
+
+        <a class="brand brand--mobile" href="dashboard-employe.html">
+          <img
+            class="brand__logo"
+            src="../assets/logo.svg"
+            alt=""
+            width="32"
+            height="32"
+          />
+          TC
+        </a>
+        <a class="brand brand--desktop" href="dashboard-employe.html">
+          <img
+            class="brand__logo"
+            src="../assets/logo.svg"
+            alt=""
+            width="32"
+            height="32"
+          />
+          TechCorp RH
+        </a>
+        <div class="topbar__actions">
+          <div class="user">
+            <span class="avatar" aria-hidden="true">CM</span>
+            <div class="user__info">
+              <p class="user__name">Claire M.</p>
+              <p class="user__role">Développeuse</p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <aside class="app__sidebar sidebar" id="navigation" hidden>
+        <nav aria-label="Navigation principale">
+          <h2 class="nav__heading" id="nav-perso">Mon espace</h2>
+          <ul class="nav" role="list" aria-labelledby="nav-perso">
+            <li>
+              <a
+                class="nav__link"
+                href="dashboard-employe.html"
+                aria-current="page"
+              >
+                <i data-lucide="layout-dashboard" aria-hidden="true"></i>
+                Tableau de bord
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="conges-demande.html">
+                <i data-lucide="calendar-days" aria-hidden="true"></i>Mes congés
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="note-frais-nouvelle.html">
+                <i data-lucide="receipt" aria-hidden="true"></i>Notes de
+                frais</a
+              >
+            </li>
+            <li>
+              <a class="nav__link" href="materiel.html"
+                ><i data-lucide="laptop" aria-hidden="true"></i> Matériel</a
+              >
+            </li>
+            <li>
+              <a class="nav__link" href="profil.html"
+                ><i data-lucide="user-round" aria-hidden="true"></i> Mon profil
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="sidebar__footer">
+          <button
+            type="button"
+            class="sidebar__logout nav__link"
+            onclick="window.location.href = './login.html'"
+          >
+            <i data-lucide="log-out"></i>
+            Déconnexion
+          </button>
+        </div>
+      </aside>
+
+      <main class="app__main" id="contenu" tabindex="-1">
+        <section class="container">
+          <header class="page-header">
+            <div class="page-header__hello">
+              <h2>Bonjour Claire 👋</h2>
+              <h3 class="page-header__subtitle">
+                Que souhaitez-vous faire aujourd’hui ?
+              </h3>
+            </div>
+            <div class="page-header__actions">
+              <a href="#" class="btn btn--secondary">Nouvelle note de frais</a>
+              <a href="#" class="btn btn--primary">Demander un congé</a>
+            </div>
+          </header>
+
+          <section>
+            <h2 class="sr-only">Mes soldes</h2>
+            <ul class="grid-auto">
+              <li class="card stat">
+                <span class="stat--bold">14</span>
+                <span>CP restants</span>
+              </li>
+              <li class="card stat">
+                <span class="stat--bold">6</span>
+                <span>RTT restants</span>
+              </li>
+              <li class="card stat">
+                <span class="stat--bold">1</span>
+                <span>notes de frais en attente</span>
+              </li>
+              <li class="card stat">
+                <span class="stat--bold">3</span>
+                <span>matériel attribué</span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="grid-split">
+            <div class="card card--recap">
+              <h2>Mes prochaines absences</h2>
+              <ul class="list">
+                <li class="card card--list">
+                  <div>
+                    <p class="list__title">Congés payés</p>
+                    <p class="list__sub-text">Du 26/10 au 30/10/2026</p>
+                  </div>
+                  <div class="list__value">
+                    <span class="list--bold">5</span>
+                    <span>jours</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="card card--recap">
+              <h2>Mon matériel</h2>
+              <ul class="list">
+                <li class="card card--list">
+                  <div>
+                    <p class="list__title">Ordinateur portable</p>
+                    <p class="list__sub-text">Depuis le 26/10/2026</p>
+                  </div>
+                  <p class="list__statut">Bon état</p>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="table-wrapper">
+            <table class="table--modern">
+              <caption>
+                <h2>Mes dernières notes de frais</h2>
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Montant</th>
+                  <th scope="col">Statut</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table__element-row">
+                  <td>12/09/2026</td>
+                  <td>Train Lyon - Paris, salon Devoxx</td>
+                  <td>Transport</td>
+                  <td>89,50 €</td>
+                  <td>
+                    <span class="badge badge--pending">En attente manager</span>
+                  </td>
+                </tr>
+                <tr class="table__element-row">
+                  <td>15/09/2026</td>
+                  <td>Déjeuner client Axelis</td>
+                  <td>Restauration</td>
+                  <td>42,00 €</td>
+                  <td>
+                    <span class="badge badge--approved">Validée</span>
+                  </td>
+                </tr>
+                <tr class="table__element-row">
+                  <td>02/09/2026</td>
+                  <td>Hôtel, formation Kubernetes</td>
+                  <td>Hébergement</td>
+                  <td>128,00 €</td>
+                  <td>
+                    <span class="badge badge--refunded"> Remboursée </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
+
+<!-- | Date | Description | Type | Montant | Statut |
+|---|---|---|---|---|
+| 12/09/2026 | Train Lyon - Paris, salon Devoxx | Transport | 89,50 € | En attente manager |
+| 15/09/2026 | Déjeuner client Axelis | Restauration | 42,00 € | Validée |
+| 02/09/2026 | Hôtel, formation Kubernetes | Hébergement | 128,00 € | Remboursée |
+ -->
