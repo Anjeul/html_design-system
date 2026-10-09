@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Dashboard - TechCorp RH</title>
+    <meta name="Dashboard employe" />
+
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#1d4ed8" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <script src="../js/lucide.min.js" defer></script>
+    <script src="../js/app.js" defer></script>
+  </head>
+  <body data-role="rh">
+    <a href="#contenu" class="skip-link">Aller au contenu principal</a>
+    <div class="app">
+      <header class="app__header topbar topbar--rh">
+        <button
+          class="topbar__menu"
+          type="button"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          <svg
+            class="burger-icon"
+            xmlns="http://w3.org"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <span class="sr-only">Ouvrir le menu</span>
+        </button>
+
+        <a class="brand brand--mobile" href="dashboard-employe.html">
+          <img
+            class="brand__logo"
+            src="../assets/logo.svg"
+            alt=""
+            width="32"
+            height="32"
+          />
+          TC
+        </a>
+        <a class="brand brand--desktop" href="dashboard-employe.html">
+          <img
+            class="brand__logo"
+            src="../assets/logo.svg"
+            alt=""
+            width="32"
+            height="32"
+          />
+          TechCorp RH
+        </a>
+        <div class="menu-dev">
+          <a href="dashboard-employe.html">Employé</a>
+          <a href="dashboard-manager.html">Manager</a>
+          <a href="dashboard-rh.html">RH</a>
+        </div>
+        <div class="topbar__actions">
+          <div class="user">
+            <span class="avatar" aria-hidden="true">SL</span>
+            <div class="user__info">
+              <p class="user__name">Sophie L.</p>
+              <p class="user__role">Responsable RH</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <aside class="app__sidebar sidebar" id="navigation" hidden>
+        <nav aria-label="Navigation principale">
+          <h2 class="nav__heading" id="nav-perso">Mon espace</h2>
+          <ul class="nav" role="list" aria-labelledby="nav-perso">
+            <li>
+              <a class="nav__link" href="#" aria-current="page"
+                ><i data-lucide="layout-dashboard" aria-hidden="true"></i>
+                Tableau de bord
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="conges-demande.html">
+                <i data-lucide="calendar-days" aria-hidden="true"></i>Mes congés
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="note-frais-nouvelle.html"
+                ><i data-lucide="receipt" aria-hidden="true"></i> Notes de
+                frais</a
+              >
+            </li>
+            <li>
+              <a class="nav__link" href="materiel.html">
+                <i data-lucide="laptop" aria-hidden="true"></i>Mon matériel</a
+              >
+            </li>
+            <li>
+              <a class="nav__link" href="profil.html"
+                ><i data-lucide="user-round" aria-hidden="true"></i> Mon profil
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="nav--secondary" aria-label="Navigation manager">
+          <h2 class="nav__heading">Gestion RH</h2>
+          <ul class="nav">
+            <li>
+              <a class="nav__link" href="demandes-conges.html"
+                ><i data-lucide="calendar-check"></i>
+                <span>Gestion des congés</span>
+                <span class="nav__count" aria-hidden="true">7 </span>
+                <span class="sr-only">Notifications, 7 non lues</span>
+              </a>
+            </li>
+
+            <li>
+              <a class="nav__link" href="demandes-conges.html"
+                ><i data-lucide="wallet"></i>
+                <span>Gestion des frais</span>
+                <span class="nav__count" aria-hidden="true">4 </span>
+                <span class="sr-only">Notifications, 4 non lues</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="demandes-conges.html"
+                ><i data-lucide="package"></i>
+                <span>Gestion du matériel</span>
+                <span class="nav__count" aria-hidden="true">3 </span>
+                <span class="sr-only">Notifications, 3 non lues</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="planning-rh.html"
+                ><i data-lucide="calendar-range"></i>
+                Planning des absences
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="vue-equipe.html">
+                <i data-lucide="users"></i>Collaborateurs
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="sidebar__footer">
+          <button
+            type="button"
+            class="sidebar__logout nav__link"
+            onclick="window.location.href = './login.html'"
+          >
+            <i data-lucide="log-out"></i>Déconnexion
+          </button>
+        </div>
+      </aside>
+
+      <main class="app__main" id="contenu" tabindex="-1">
+        <section class="container">
+          <header class="page-header">
+            <div class="page-header__hello">
+              <h2>Bonjour Sophie 👋</h2>
+              <h3 class="page-header__subtitle">
+                Que souhaitez-vous faire aujourd’hui ?
+              </h3>
+            </div>
+            <div class="page-header__actions">
+              <a href="#" class="btn btn--secondary">Gérer le matériel</a>
+              <a href="#" class="btn btn--primary">Gérer les congés</a>
+            </div>
+          </header>
+
+          <section id="kpi-title">
+            <h2 class="sr-only" id="kpi-title">Mes KPI</h2>
+            <ul class="grid-auto">
+              <li class="card stat">
+                <span class="stat--bold">7</span>
+                <span>Congés à valider</span>
+              </li>
+              <li class="card stat">
+                <span class="stat--bold">3</span>
+                <span>Demandes de matériel</span>
+              </li>
+              <li class="card stat">
+                <span class="stat--bold">1 240 €</span>
+                <span>Frais à rembourser</span>
+              </li>
+            </ul>
+          </section>
+          <section
+            class="grid-split grid-split-rh"
+            aria-labelledby="chart-title"
+          >
+            <div class="card chart">
+              <div class="card__header">
+                <h2 id="chart-title">Demandes de congés</h2>
+                <p>Évolution sur les 6 derniers mois</p>
+              </div>
+              <ul
+                class="chart__bars"
+                aria-label="Nombre de demandes de congés par mois"
+              >
+                <li class="chart__item" style="--valeur: 43%">
+                  <span class="sr-only">Mai : 9 demandes de congés</span>
+                  <span class="chart__value" aria-hidden="true">9</span>
+                  <span class="chart__bar" aria-hidden="true"></span>
+                  <span class="chart__label" aria-hidden="true">Mai</span>
+                </li>
+                <li class="chart__item" style="--valeur: 67%">
+                  <span class="sr-only">Juin : 14 demandes de congés</span>
+                  <span class="chart__value" aria-hidden="true">14</span>
+                  <span class="chart__bar" aria-hidden="true"></span>
+                  <span class="chart__label" aria-hidden="true">Juin</span>
+                </li>
+
+                <li class="chart__item" style="--valeur: 20%">
+                  <span class="sr-only">Juillet : 4 demandes de congés</span>
+                  <span class="chart__value" aria-hidden="true">4</span>
+                  <span class="chart__bar" aria-hidden="true"></span>
+                  <span class="chart__label" aria-hidden="true">Juillet</span>
+                </li>
+                <li class="chart__item" style="--valeur: 0%">
+                  <span class="sr-only">Aout : 0 demandes de congés</span>
+                  <span class="chart__value" aria-hidden="true">0</span>
+                  <span class="chart__bar" aria-hidden="true"></span>
+                  <span class="chart__label" aria-hidden="true">Aout</span>
+                </li>
+                <li class="chart__item" style="--valeur: 100%">
+                  <span class="sr-only">Septembre : 21 demandes de congés</span>
+                  <span class="chart__value" aria-hidden="true">21</span>
+                  <span class="chart__bar" aria-hidden="true"></span>
+                  <span class="chart__label" aria-hidden="true">Septembre</span>
+                </li>
+                <li class="chart__item" style="--valeur: 88%">
+                  <span class="sr-only">Octobre : 19 demandes de congés</span>
+                  <span class="chart__value" aria-hidden="true">19</span>
+                  <span class="chart__bar" aria-hidden="true"></span>
+                  <span class="chart__label" aria-hidden="true">Octobre</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card__header"><h2>Notes de frais</h2></div>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card__header"><h2>Inventaire du matériel</h2></div>
+          </section>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
+
+<!-- | Date | Description | Type | Montant | Statut |
+|---|---|---|---|---|
+| 12/09/2026 | Train Lyon - Paris, salon Devoxx | Transport | 89,50 € | En attente manager |
+| 15/09/2026 | Déjeuner client Axelis | Restauration | 42,00 € | Validée |
+| 02/09/2026 | Hôtel, formation Kubernetes | Hébergement | 128,00 € | Remboursée |
+ -->

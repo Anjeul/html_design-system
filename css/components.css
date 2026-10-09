@@ -328,6 +328,13 @@ input[type="checkbox"] {
     var(--color-secondary) 100%
   );
 }
+.topbar--rh {
+  background: linear-gradient(
+    to right,
+    var(--color-secondary) 80%,
+    var(--color-accent) 100%
+  );
+}
 .topbar__actions {
   margin-left: auto;
   display: flex;
@@ -427,7 +434,6 @@ input[type="checkbox"] {
 }
 .nav {
   margin-top: 1rem;
-  padding-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
@@ -523,7 +529,6 @@ input[type="checkbox"] {
 .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
@@ -662,4 +667,46 @@ caption {
 
 .presence-list__item .avatar {
   flex-shrink: 0;
+}
+
+/* CHART ( graphique ) */
+.chart__bars {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+}
+.chart__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 14rem;
+  min-width: 0;
+}
+.chart__value {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+.chart__bar {
+  display: block;
+  width: 50%;
+  height: var(--valeur);
+
+  background: var(--theme-color);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.chart__label {
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  margin-top: var(--space-2);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
 }

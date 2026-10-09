@@ -59,6 +59,11 @@
           />
           TechCorp RH
         </a>
+        <div class="menu-dev">
+          <a href="dashboard-employe.html">Employé</a>
+          <a href="dashboard-manager.html">Manager</a>
+          <a href="dashboard-rh.html">RH</a>
+        </div>
         <div class="topbar__actions">
           <div class="user">
             <span class="avatar" aria-hidden="true">KB</span>
@@ -75,7 +80,7 @@
           <h2 class="nav__heading" id="nav-perso">Mon espace</h2>
           <ul class="nav" role="list" aria-labelledby="nav-perso">
             <li>
-              <a class="nav__link" href="dashboard-employe.html"
+              <a class="nav__link" href="#"
                 ><i data-lucide="layout-dashboard" aria-hidden="true"></i>
                 Tableau de bord
               </a>
@@ -93,12 +98,12 @@
             </li>
             <li>
               <a class="nav__link" href="materiel.html">
-                <i data-lucide="laptop" aria-hidden="true"></i>Matériel</a
+                <i data-lucide="laptop" aria-hidden="true"></i>Mon matériel</a
               >
             </li>
             <li>
               <a class="nav__link" href="profil.html"
-                ><i data-lucide="user-round" aria-hidden="true"></i> Mon profil
+                ><i data-lucide="user-round" aria-hidden="true"></i>Mon profil
               </a>
             </li>
           </ul>
@@ -115,11 +120,8 @@
               <a class="nav__link" href="demandes-conges.html"
                 ><i data-lucide="clipboard-check"></i>
                 <span>Demandes à traiter</span>
-                <span
-                  class="nav__count"
-                  aria-label="nombre de demandes à traiter"
-                  >5
-                </span>
+                <span class="nav__count" aria-hidden="true">5 </span>
+                <span class="sr-only">Notifications, 3 non lues</span>
               </a>
             </li>
             <li>
@@ -155,7 +157,7 @@
           </header>
 
           <div class="alert alert-warning">
-            <div class="alert__content">
+            <div class="alert__content" role="status">
               <div class="alert__header">
                 <span class="alert__title">Attention</span>
                 <span class="alert__meta">26 — 30 OCT</span>
@@ -171,7 +173,7 @@
             </div>
           </div>
           <section>
-            <h2 class="sr-only">Mes soldes</h2>
+            <h2 class="sr-only">Mes KPI</h2>
             <ul class="grid-auto">
               <li class="card stat">
                 <span class="stat--bold">5</span>
@@ -192,80 +194,82 @@
           <section class="grid-split">
             <div class="card card--recap">
               <h2>Dernières demandes en attente</h2>
-              <table class="table--modern">
-                <thead>
-                  <tr>
-                    <th scope="col">Collaborateur</th>
-                    <th scope="col">Type</th>
-                    <th scope="col">Période</th>
-                    <th scope="col">Jours</th>
-                    <th scope="col">Statut</th>
-                    <th scope="col">Action</th>
-                  </tr>
-                </thead>
+              <div class="table-wrapper">
+                <table class="table--modern">
+                  <thead>
+                    <tr>
+                      <th scope="col">Collaborateur</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Période</th>
+                      <th scope="col">Jours</th>
+                      <th scope="col">Statut</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
 
-                <tbody>
-                  <tr>
-                    <td>Claire Martin</td>
-                    <td>Congés payés</td>
-                    <td>26/10 au 30/10/2026</td>
-                    <td>5</td>
-                    <td>
-                      <span class="badge badge--pending">
-                        En attente manager
-                      </span>
-                    </td>
-                    <td>
-                      <a
-                        class="btn btn--ghost btn--sm"
-                        href="demande-detail.html"
-                      >
-                        Examiner<span class="sr-only">
-                          la demande de Claire Martin</span
+                  <tbody>
+                    <tr>
+                      <td>Claire Martin</td>
+                      <td>Congés payés</td>
+                      <td>26/10 au 30/10/2026</td>
+                      <td>5</td>
+                      <td>
+                        <span class="badge badge--pending">
+                          En attente manager
+                        </span>
+                      </td>
+                      <td>
+                        <a
+                          class="btn btn--ghost btn--sm"
+                          href="demande-detail.html"
                         >
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Thomas Roux</td>
-                    <td>RTT</td>
-                    <td>30/10/2026</td>
-                    <td>1</td>
-                    <td>
-                      <span class="badge badge--approved"> Validée </span>
-                    </td>
-                    <td>
-                      <a
-                        class="btn btn--ghost btn--sm"
-                        href="demande-detail.html"
-                      >
-                        Examiner<span class="sr-only">
-                          la demande de Thomas Roux</span
+                          Examiner<span class="sr-only">
+                            la demande de Claire Martin</span
+                          >
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Thomas Roux</td>
+                      <td>RTT</td>
+                      <td>30/10/2026</td>
+                      <td>1</td>
+                      <td>
+                        <span class="badge badge--approved"> Validée </span>
+                      </td>
+                      <td>
+                        <a
+                          class="btn btn--ghost btn--sm"
+                          href="demande-detail.html"
                         >
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Mehdi Fontaine</td>
-                    <td>Sans solde</td>
-                    <td>16/11 au 20/11/2026</td>
-                    <td>5</td>
-                    <td>
-                      <span class="badge badge--rejected"> Refusée</span>
-                    </td>
-                    <td>
-                      <a
-                        class="btn btn--ghost btn--sm"
-                        href="demande-detail.html"
-                      >
-                        Examiner<span class="sr-only">
-                          la demande de Mehdi Fontaine</span
+                          Examiner<span class="sr-only">
+                            la demande de Thomas Roux</span
+                          >
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Mehdi Fontaine</td>
+                      <td>Sans solde</td>
+                      <td>16/11 au 20/11/2026</td>
+                      <td>5</td>
+                      <td>
+                        <span class="badge badge--rejected"> Refusée</span>
+                      </td>
+                      <td>
+                        <a
+                          class="btn btn--ghost btn--sm"
+                          href="demande-detail.html"
                         >
-                      </a>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                          Examiner<span class="sr-only">
+                            la demande de Mehdi Fontaine</span
+                          >
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div class="card card--recap">
               <h2>Présence aujourd'hui</h2>

@@ -161,10 +161,13 @@
   align-items: start;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 40em) {
   .grid-split {
     grid-template-columns: 2fr 1fr;
     align-items: stretch;
+  }
+  .grid-split-rh {
+    grid-template-columns: 1fr 1fr;
   }
 }
 /* .page {
@@ -203,3 +206,10 @@
   padding: var(--space-5) var(--space-4);
   min-width: 0;
 } */
+
+.container,
+.grid-split,
+.grid-split > .card {
+  min-width: 0;
+  max-width: 100%;
+}

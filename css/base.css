@@ -95,9 +95,22 @@ ul {
   padding: 0;
   margin: 0;
 }
+h2 {
+  margin-bottom: 1rem;
+}
 
 /* Contour visible à la navigation clavier. Ne jamais le supprimer. */
 :focus-visible {
   outline: 3px solid var(--color-focus);
   outline-offset: 2px;
+}
+.menu-dev {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.menu-dev a {
+  color: white;
 }
